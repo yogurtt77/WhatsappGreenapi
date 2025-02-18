@@ -1,0 +1,179 @@
+/* styles.css */
+
+/* Общее оформление */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Статус бар */
+.status-bar {
+  background-color: #128c7e;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Область сообщений */
+.messages-area {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #e5ddd5;
+}
+
+/* Оформление сообщения */
+.message {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.message.outgoing {
+  align-self: flex-end;
+}
+
+.message.incoming {
+  align-self: flex-start;
+}
+
+.message-content {
+  background-color: #dcf8c6;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  line-height: 18px;
+  word-wrap: break-word;
+}
+
+.message.outgoing .message-content {
+  background-color: #128c7e;
+  color: #fff;
+}
+
+.message-status {
+  font-size: 12px;
+  color: #999;
+  margin-top: 5px;
+}
+
+/* Контейнер для ввода сообщений */
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #128c7e;
+}
+
+.input-container button {
+  background-color: #128c7e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-container button:disabled {
+  background-color: #ddd;
+}
+
+.input-container button:hover:not(:disabled) {
+  background-color: #075e54;
+}
+
+/* Форма авторизации */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+}
+
+.auth-form input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.auth-form input:focus {
+  border-color: #128c7e;
+}
+
+.auth-form button {
+  padding: 12px;
+  background-color: #128c7e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.auth-form button:hover {
+  background-color: #075e54;
+}
+
+/* Дополнительные стили */
+input[type="text"] {
+  font-size: 14px;
+  padding: 10px;
+}
+
+input[type="text"]:focus {
+  border-color: #128c7e;
+}
+
+input[type="password"] {
+  font-size: 14px;
+  padding: 10px;
+}
+
+input[type="password"]:focus {
+  border-color: #128c7e;
+}
+
+button {
+  font-size: 16px;
+}
